@@ -1,0 +1,239 @@
+/* Series Detail Modal - Netflix Style */
+.detail-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  overflow-y: auto;
+  backdrop-filter: blur(4px);
+}
+
+.detail-modal {
+  background: #181818;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 900px;
+  margin: auto;
+  position: relative;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
+  overflow: hidden;
+}
+
+.detail-modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #181818;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.detail-modal-close:hover {
+  background: #333;
+  transform: rotate(90deg);
+}
+
+.detail-modal-close svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* Hero Section */
+.detail-modal-hero {
+  position: relative;
+  height: 450px;
+  background-size: cover;
+  background-position: center top;
+}
+
+.detail-hero-gradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, #181818 0%, rgba(24, 24, 24, 0.6) 50%, transparent 100%);
+}
+
+.detail-hero-content {
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+  right: 2rem;
+}
+
+.detail-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+.detail-hero-actions {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.detail-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.detail-btn .btn-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.detail-btn.play-btn {
+  background: #fff;
+  color: #141414;
+  padding: 0.75rem 2rem;
+}
+
+.detail-btn.play-btn:hover {
+  background: rgba(255, 255, 255, 0.85);
+}
+
+.detail-btn.add-btn,
+.detail-btn.like-btn {
+  width: 42px;
+  height: 42px;
+  background: rgba(42, 42, 42, 0.6);
+  color: #fff;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+}
+
+.detail-btn.add-btn:hover,
+.detail-btn.like-btn:hover {
+  border-color: #fff;
+  background: rgba(42, 42, 42, 0.9);
+}
+
+/* Content Section */
+.detail-content {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 2rem;
+  padding: 1.5rem 2rem;
+}
+
+.detail-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.meta-match {
+  color: #46d369;
+  font-weight: 600;
+}
+
+.meta-year,
+.meta-seasons {
+  color: #fff;
+}
+
+.meta-rating {
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  padding: 0.1rem 0.4rem;
+  font-size: 0.85rem;
+}
+
+.meta-quality {
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  padding: 0.1rem 0.4rem;
+  font-size: 0.75rem;
+  border-radius: 2px;
+}
+
+.detail-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #d2d2d2;
+}
+
+/* Sidebar */
+.detail-info-row {
+  margin-bottom: 0.75rem;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.info-label {
+  color: #777;
+}
+
+.info-value {
+  color: #fff;
+}
+
+/* Section */
+.detail-section {
+  padding: 1.5rem 2rem;
+  border-top: 1px solid #333;
+}
+
+.detail-section-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.detail-section-placeholder {
+  color: #777;
+  font-size: 0.95rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .detail-modal-overlay {
+    padding: 0;
+  }
+
+  .detail-modal {
+    border-radius: 0;
+    max-width: 100%;
+  }
+
+  .detail-modal-hero {
+    height: 300px;
+  }
+
+  .detail-title {
+    font-size: 1.75rem;
+  }
+
+  .detail-content {
+    grid-template-columns: 1fr;
+    padding: 1rem 1.5rem;
+  }
+
+  .detail-hero-content {
+    left: 1.5rem;
+    right: 1.5rem;
+  }
+
+  .detail-section {
+    padding: 1rem 1.5rem;
+  }
+}

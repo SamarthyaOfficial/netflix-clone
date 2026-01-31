@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Netflix Clone</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+      // #region agent log
+      (function(){var u='http://127.0.0.1:7242/ingest/22bf7d4e-8769-4232-829a-0c03e272e708';fetch(u,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'index.html',message:'index loaded',data:{},timestamp:Date.now(),sessionId:'debug-session',hypothesisId:'H1,H4'})}).catch(function(){});window.onerror=function(m,f,l,c,err){fetch(u,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:(f||'')+':'+l,message:'error',data:{msg:String(m),stack:err&&err.stack},timestamp:Date.now(),sessionId:'debug-session',hypothesisId:'H1'})}).catch(function(){});return false;};})();
+      // #endregion
+    </script>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

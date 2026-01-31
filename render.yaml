@@ -1,0 +1,23 @@
+services:
+  # Backend API
+  - type: web
+    name: netflix-clone-api
+    runtime: docker
+    dockerfilePath: ./backend/Dockerfile
+    envVars:
+      - key: PORT
+        value: 8081
+      - key: CORS_ORIGINS
+        sync: false  # Set manually after frontend is deployed
+      - key: JWT_SECRET
+        generateValue: true
+
+  # Frontend (alternative: deploy to Vercel instead)
+  # - type: web
+  #   name: netflix-clone-frontend
+  #   runtime: static
+  #   buildCommand: cd frontend && npm install && npm run build
+  #   staticPublishPath: ./frontend/dist
+  #   envVars:
+  #     - key: VITE_API_URL
+  #       sync: false
